@@ -9,6 +9,7 @@ const lobster = Lobster({
   weight: "400",
   subsets: ["latin"],
 });
+
 export default function Home() {
   const cocktails = [
     {
@@ -35,7 +36,7 @@ export default function Home() {
     <main className="flex flex-col pt-7 px-4 gap-20">
       <header className="flex flex-col justify-center items-center gap-5">
         <div className="flex gap-2 justify-center items-center">
-          <Image src="/logo.jpeg" width={50} height={50} alt="logo" />
+          <Image src="/logo.png" width={55} height={55} alt="logo" />
           <h1 className={`text-5xl font-bold ${oswald.className}`}>
             BAR BENCHER
           </h1>

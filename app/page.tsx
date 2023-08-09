@@ -18,7 +18,7 @@ export default function Home() {
     },
     {
       name: "Vodkatini",
-      ingredients: ["vodka", "martini blanc", "olives (en option)"],
+      ingredients: ["vodka", "vermouth blanc", "olives (en option)"],
     },
     {
       name: "Rum Collins",
@@ -27,6 +27,16 @@ export default function Home() {
         "citron",
         "sucre",
         "rhum blanc",
+        "perrier",
+      ],
+    },
+    {
+      name: "Tom Collins",
+      ingredients: [
+        "zeste de citron",
+        "citron",
+        "sucre",
+        "dry gin",
         "perrier",
       ],
     },

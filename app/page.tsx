@@ -40,6 +40,24 @@ export default function Home() {
         "perrier",
       ],
     },
+    {
+      name: "Americano",
+      ingredients: [
+        "campari",
+        "vermouth rouge",
+        "perrier",
+        "tranche d'orange",
+      ]
+    },
+    {
+      name: "Negroni",
+      ingredients: [
+        "campari",
+        "vermouth rouge",
+        "gin dry",
+        "zeste d'orange",
+      ]
+    },
   ];
 
   return (

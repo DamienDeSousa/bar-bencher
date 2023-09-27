@@ -58,6 +58,13 @@ export default function Home() {
         "zeste d'orange",
       ]
     },
+    {
+      name: "Perrier tranche (= corps de lâche)",
+      ingredients:  [
+        "perrier",
+        "citron",
+      ]
+    }
   ];
 
   return (

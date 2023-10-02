@@ -59,12 +59,24 @@ export default function Home() {
       ]
     },
     {
-      name: "Perrier tranche (= corps de lâche)",
-      ingredients:  [
+      name: "Mojito (coming soon)",
+      ingredients: [
+        "citron vert",
+        "sucre de canne",
+        "rhum blanc",
         "perrier",
-        "citron",
+        "sirop de sucre",
+        "menthe",
       ]
-    }
+    },
+    {
+      name: "Vesper (coming soon)",
+      ingredients: [
+        "gin",
+        "vodka",
+        "lillet",
+      ]
+    },
   ];
 
   return (

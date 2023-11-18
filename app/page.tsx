@@ -59,7 +59,7 @@ export default function Home() {
       ]
     },
     {
-      name: "Mojito (coming soon)",
+      name: "Mojito",
       ingredients: [
         "citron vert",
         "sucre de canne",
@@ -70,7 +70,7 @@ export default function Home() {
       ]
     },
     {
-      name: "Vesper (coming soon)",
+      name: "Vesper",
       ingredients: [
         "gin",
         "vodka",

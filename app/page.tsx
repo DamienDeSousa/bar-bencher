@@ -32,31 +32,15 @@ export default function Home() {
     },
     {
       name: "Tom Collins",
-      ingredients: [
-        "zeste de citron",
-        "citron",
-        "sucre",
-        "dry gin",
-        "perrier",
-      ],
+      ingredients: ["zeste de citron", "citron", "sucre", "dry gin", "perrier"],
     },
     {
       name: "Americano",
-      ingredients: [
-        "campari",
-        "vermouth rouge",
-        "perrier",
-        "tranche d'orange",
-      ]
+      ingredients: ["campari", "vermouth rouge", "perrier", "tranche d'orange"],
     },
     {
       name: "Negroni",
-      ingredients: [
-        "campari",
-        "vermouth rouge",
-        "gin dry",
-        "zeste d'orange",
-      ]
+      ingredients: ["campari", "vermouth rouge", "gin dry", "zeste d'orange"],
     },
     {
       name: "Mojito",
@@ -67,15 +51,15 @@ export default function Home() {
         "perrier",
         "sirop de sucre",
         "menthe",
-      ]
+      ],
     },
     {
       name: "Vesper",
-      ingredients: [
-        "gin",
-        "vodka",
-        "lillet",
-      ]
+      ingredients: ["gin", "vodka", "lillet"],
+    },
+    {
+      name: "Old Fashioned",
+      ingredients: ["sucre", "angostura", "bourbon", "zeste d'orange"],
     },
   ];
 

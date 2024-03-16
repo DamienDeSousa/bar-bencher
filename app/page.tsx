@@ -61,10 +61,17 @@ export default function Home() {
       name: "Old Fashioned",
       ingredients: ["sucre", "angostura", "bourbon", "zeste d'orange"],
     },
+    {
+      name: "Stinger",
+      ingredients: [
+        "cognac",
+        "crème de menthe blanche"
+      ]
+    }
   ];
 
   return (
-    <main className="flex flex-col pt-7 px-4 gap-20">
+    <main className="flex flex-col py-7 px-4 gap-20">
       <header className="flex flex-col justify-center items-center gap-5">
         <div className="flex gap-2 justify-center items-center">
           <Image src="/logo.png" width={55} height={55} alt="logo" />

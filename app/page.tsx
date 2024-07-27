@@ -49,7 +49,6 @@ export default function Home() {
         "sucre de canne",
         "rhum blanc",
         "perrier",
-        "sirop de sucre",
         "menthe",
       ],
     },
@@ -63,11 +62,12 @@ export default function Home() {
     },
     {
       name: "Stinger",
-      ingredients: [
-        "cognac",
-        "crème de menthe blanche"
-      ]
-    }
+      ingredients: ["cognac", "crème de menthe blanche"],
+    },
+    {
+      name: "Cuba Libre",
+      ingredients: ["rhum blanc", "coca", "citron vert"],
+    },
   ];
 
   return (

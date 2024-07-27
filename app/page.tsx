@@ -21,7 +21,7 @@ export default function Home() {
       ingredients: ["vodka", "vermouth blanc", "olives (en option)"],
     },
     {
-      name: "Rum Collins",
+      name: "Rhum Collins",
       ingredients: [
         "zeste de citron",
         "citron",

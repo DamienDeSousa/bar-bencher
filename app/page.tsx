@@ -16,10 +16,10 @@ export default function Home() {
       name: "Mint Julep",
       ingredients: ["bourbon", "menthe", "sirop de sucre"],
     },
-    {
-      name: "Vodkatini",
-      ingredients: ["vodka", "vermouth blanc", "olives (en option)"],
-    },
+    // {
+    //   name: "Vodkatini",
+    //   ingredients: ["vodka", "vermouth blanc", "olives (en option)"],
+    // },
     {
       name: "Rhum Collins",
       ingredients: [
@@ -52,18 +52,18 @@ export default function Home() {
         "menthe",
       ],
     },
-    {
-      name: "Vesper",
-      ingredients: ["gin", "vodka", "lillet"],
-    },
+    // {
+    //   name: "Vesper",
+    //   ingredients: ["gin", "vodka", "lillet"],
+    // },
     {
       name: "Old Fashioned",
       ingredients: ["sucre", "angostura", "bourbon", "zeste d'orange"],
     },
-    {
-      name: "Stinger",
-      ingredients: ["cognac", "crème de menthe blanche"],
-    },
+    // {
+    //   name: "Stinger",
+    //   ingredients: ["cognac", "crème de menthe blanche"],
+    // },
     {
       name: "Cuba Libre",
       ingredients: ["rhum blanc", "coca", "citron vert"],

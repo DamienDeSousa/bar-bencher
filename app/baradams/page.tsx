@@ -39,7 +39,7 @@ export default function Home() {
       ingredients: ["vodka", "Liqueur de café", "crème fraîche"],
     },
     {
-      name: "Jacqueline",
+      name: "Summer at Saint-Trop'",
       ingredients: ["vin blanc", "sirop de grenadine", "limonade"],
     },
     {

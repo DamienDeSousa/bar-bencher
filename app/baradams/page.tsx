@@ -39,19 +39,27 @@ export default function Home() {
       ingredients: ["vodka", "Liqueur de café", "crème fraîche"],
     },
     {
-      name: "Summer at Saint-Trop'",
-      ingredients: ["vin blanc", "sirop de grenadine", "limonade"],
+      name: "Mint Julep",
+      ingredients: ["bourbon", "menthe", "sirop de sucre"],
     },
     {
-      name: "Sex on the Beach",
-      ingredients: [
-        "Liqueur de framboise",
-        "crème de pêche",
-        "vodka",
-        "jus d'orange",
-        "jus de cramberry",
-      ],
+      name: "Old Fashioned",
+      ingredients: ["sucre", "angostura", "bourbon", "zeste d'orange"],
     },
+    // {
+    //   name: "Summer at Saint-Trop'",
+    //   ingredients: ["vin blanc", "sirop de grenadine", "limonade"],
+    // },
+    // {
+    //   name: "Sex on the Beach",
+    //   ingredients: [
+    //     "Liqueur de framboise",
+    //     "crème de pêche",
+    //     "vodka",
+    //     "jus d'orange",
+    //     "jus de cramberry",
+    //   ],
+    // },
   ];
 
   return (

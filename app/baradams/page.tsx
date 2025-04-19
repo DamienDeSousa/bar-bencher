@@ -60,6 +60,10 @@ export default function Home() {
         "jus de cramberry",
       ],
     },
+    {
+      name: "Piña Colada",
+      ingredients: ["rhum blanc", "crème de coco", "jus d'ananas"],
+    },
   ];
 
   return (

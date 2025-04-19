@@ -76,6 +76,10 @@ export default function Home() {
       name: "White Russian",
       ingredients: ["vodka", "Liqueur de café", "crème fraîche"],
     },
+    {
+      name: "Piña Colada",
+      ingredients: ["rhum blanc", "crème de coco", "jus d'ananas"],
+    },
   ];
 
   return (

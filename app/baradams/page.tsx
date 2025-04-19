@@ -21,14 +21,14 @@ export default function Home() {
       ingredients: [
         "citron vert",
         "sucre de canne",
-        "rhum ambré",
+        "rhum blanc",
         "perrier",
         "menthe",
       ],
     },
     {
       name: "Cuba Libre",
-      ingredients: ["rhum blanc", "coca", "citron vert"],
+      ingredients: ["rhum ambré", "coca", "citron vert"],
     },
     {
       name: "Sazerac",

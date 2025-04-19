@@ -21,7 +21,7 @@ export default function Home() {
       ingredients: [
         "citron vert",
         "sucre de canne",
-        "rhum blanc",
+        "rhum ambré",
         "perrier",
         "menthe",
       ],

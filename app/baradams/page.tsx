@@ -31,14 +31,6 @@ export default function Home() {
       ingredients: ["rhum ambré", "coca", "citron vert"],
     },
     {
-      name: "Sazerac",
-      ingredients: ["bourbon", "Peychaud's bitter", "sucre liquide"],
-    },
-    {
-      name: "White Russian",
-      ingredients: ["vodka", "Liqueur de café", "crème fraîche"],
-    },
-    {
       name: "Mint Julep",
       ingredients: ["bourbon", "menthe", "sirop de sucre"],
     },

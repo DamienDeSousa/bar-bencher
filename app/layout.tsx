@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className="bg-[#c8b096]">{children}</body>
+      <body className="bg-[#f4f1e8] overflow-x-hidden">{children}</body>
     </html>
   );
 }

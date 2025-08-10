@@ -21,11 +21,11 @@ export default function Home() {
       },
       {
         name: "Old Fashioned",
-        ingredients: ["sucre", "angostura", "bourbon", "zeste d&rsquo;orange"],
+        ingredients: ["sucre", "angostura", "bourbon", "zeste d'orange"],
       },
       {
         name: "Sazerac",
-        ingredients: ["bourbon", "Peychaud&rsquo;s bitter", "sucre de canne"],
+        ingredients: ["bourbon", "Peychaud's bitter", "sucre de canne"],
       },
     ],
     Gin: [
@@ -41,12 +41,7 @@ export default function Home() {
       },
       {
         name: "Negroni",
-        ingredients: [
-          "campari",
-          "vermouth rouge",
-          "gin dry",
-          "zeste d&rsquo;orange",
-        ],
+        ingredients: ["campari", "vermouth rouge", "gin dry", "zeste d'orange"],
       },
       {
         name: "Vesper",
@@ -90,7 +85,7 @@ export default function Home() {
       },
       {
         name: "Piña Colada",
-        ingredients: ["rhum blanc", "crème de coco", "jus d&rsquo;ananas"],
+        ingredients: ["rhum blanc", "crème de coco", "jus d'ananas"],
       },
     ],
     "Cognac & Brandy": [
@@ -106,7 +101,7 @@ export default function Home() {
           "campari",
           "vermouth rouge",
           "perrier",
-          "tranche d&rsquo;orange",
+          "tranche d'orange",
         ],
       },
     ],

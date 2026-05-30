@@ -23,52 +23,56 @@ export default function Home() {
         name: "Old Fashioned",
         ingredients: ["sucre", "angostura", "bourbon", "zeste d'orange"],
       },
-      {
-        name: "Sazerac",
-        ingredients: ["bourbon", "Peychaud's bitter", "sucre de canne"],
-      },
+      // {
+      //   name: "Sazerac",
+      //   ingredients: ["bourbon", "Peychaud's bitter", "sucre de canne"],
+      // },
     ],
-    Gin: [
-      {
-        name: "Tom Collins",
-        ingredients: [
-          "zeste de citron",
-          "citron",
-          "sucre",
-          "dry gin",
-          "perrier",
-        ],
-      },
-      {
-        name: "Negroni",
-        ingredients: ["campari", "vermouth rouge", "gin dry", "zeste d'orange"],
-      },
-      {
-        name: "Vesper",
-        ingredients: ["gin", "vodka", "lillet"],
-      },
-    ],
+    // Gin: [
+    //   {
+    //     name: "Tom Collins",
+    //     ingredients: [
+    //       "zeste de citron",
+    //       "citron",
+    //       "sucre",
+    //       "dry gin",
+    //       "perrier",
+    //     ],
+    //   },
+    //   {
+    //     name: "Negroni",
+    //     ingredients: ["campari", "vermouth rouge", "gin dry", "zeste d'orange"],
+    //   },
+    //   {
+    //     name: "Vesper",
+    //     ingredients: ["gin", "vodka", "lillet"],
+    //   },
+    // ],
     Vodka: [
+      // {
+      //   name: "Vodkatini",
+      //   ingredients: ["vodka", "vermouth blanc", "olives (en option)"],
+      // },
+      // {
+      //   name: "White Russian",
+      //   ingredients: ["vodka", "Liqueur de café", "crème fraîche"],
+      // },
       {
-        name: "Vodkatini",
-        ingredients: ["vodka", "vermouth blanc", "olives (en option)"],
-      },
-      {
-        name: "White Russian",
-        ingredients: ["vodka", "Liqueur de café", "crème fraîche"],
+        name: "Sex on the Beach",
+        ingredients: ["liqueur de framboise", "crème de pêche", "vodka", "jus d'orange", "jus de cranberry"],
       },
     ],
     Rhum: [
-      {
-        name: "Rhum Collins",
-        ingredients: [
-          "zeste de citron",
-          "citron",
-          "sucre",
-          "rhum blanc",
-          "perrier",
-        ],
-      },
+      // {
+      //   name: "Rhum Collins",
+      //   ingredients: [
+      //     "zeste de citron",
+      //     "citron",
+      //     "sucre",
+      //     "rhum blanc",
+      //     "perrier",
+      //   ],
+      // },
       {
         name: "Mojito",
         ingredients: [
@@ -79,32 +83,32 @@ export default function Home() {
           "menthe",
         ],
       },
-      {
-        name: "Cuba Libre",
-        ingredients: ["rhum blanc", "coca", "citron vert"],
-      },
-      {
-        name: "Piña Colada",
-        ingredients: ["rhum blanc", "crème de coco", "jus d'ananas"],
-      },
+      // {
+      //   name: "Cuba Libre",
+      //   ingredients: ["rhum blanc", "coca", "citron vert"],
+      // },
+      // {
+      //   name: "Piña Colada",
+      //   ingredients: ["rhum blanc", "crème de coco", "jus d'ananas"],
+      // },
     ],
-    "Cognac & Brandy": [
-      {
-        name: "Stinger",
-        ingredients: ["cognac", "crème de menthe blanche"],
-      },
-    ],
-    Apéritifs: [
-      {
-        name: "Americano",
-        ingredients: [
-          "campari",
-          "vermouth rouge",
-          "perrier",
-          "tranche d'orange",
-        ],
-      },
-    ],
+    // "Cognac & Brandy": [
+    //   {
+    //     name: "Stinger",
+    //     ingredients: ["cognac", "crème de menthe blanche"],
+    //   },
+    // ],
+    // Apéritifs: [
+    //   {
+    //     name: "Americano",
+    //     ingredients: [
+    //       "campari",
+    //       "vermouth rouge",
+    //       "perrier",
+    //       "tranche d'orange",
+    //     ],
+    //   },
+    // ],
   };
 
   return (

@@ -1,259 +1,220 @@
-import { Crimson_Text, Playfair_Display } from "next/font/google";
-import Image from "next/image";
+import { Great_Vibes, Cormorant_Garamond, Quicksand } from "next/font/google";
 
-const playfairDisplay = Playfair_Display({
+const greatVibes = Great_Vibes({
   subsets: ["latin"],
-  weight: ["400", "600", "700", "900"],
+  weight: "400",
 });
 
-const crimsonText = Crimson_Text({
-  weight: ["400", "600"],
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
   style: ["normal", "italic"],
 });
 
+const quicksand = Quicksand({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+// ✏️ Personnalise les prénoms du couple ici
+const PARTNER_ONE = "Floriane";
+const PARTNER_TWO = "Swann";
+
 export default function Home() {
-  const cocktailsBySpirit = {
-    "Bourbon & Whiskey": [
-      {
-        name: "Mint Julep",
-        ingredients: ["bourbon", "menthe", "sirop de sucre"],
-      },
-      {
-        name: "Old Fashioned",
-        ingredients: ["sucre", "angostura", "bourbon", "zeste d'orange"],
-      },
-      // {
-      //   name: "Sazerac",
-      //   ingredients: ["bourbon", "Peychaud's bitter", "sucre de canne"],
-      // },
-    ],
-    // Gin: [
-    //   {
-    //     name: "Tom Collins",
-    //     ingredients: [
-    //       "zeste de citron",
-    //       "citron",
-    //       "sucre",
-    //       "dry gin",
-    //       "perrier",
-    //     ],
-    //   },
-    //   {
-    //     name: "Negroni",
-    //     ingredients: ["campari", "vermouth rouge", "gin dry", "zeste d'orange"],
-    //   },
-    //   {
-    //     name: "Vesper",
-    //     ingredients: ["gin", "vodka", "lillet"],
-    //   },
-    // ],
-    Vodka: [
-      // {
-      //   name: "Vodkatini",
-      //   ingredients: ["vodka", "vermouth blanc", "olives (en option)"],
-      // },
-      // {
-      //   name: "White Russian",
-      //   ingredients: ["vodka", "Liqueur de café", "crème fraîche"],
-      // },
-      {
-        name: "Sex on the Beach",
-        ingredients: ["liqueur de framboise", "crème de pêche", "vodka", "jus d'orange", "jus de cranberry"],
-      },
-    ],
-    Rhum: [
-      // {
-      //   name: "Rhum Collins",
-      //   ingredients: [
-      //     "zeste de citron",
-      //     "citron",
-      //     "sucre",
-      //     "rhum blanc",
-      //     "perrier",
-      //   ],
-      // },
-      {
-        name: "Mojito",
-        ingredients: [
-          "citron vert",
-          "sucre de canne",
-          "rhum blanc",
-          "perrier",
-          "menthe",
-        ],
-      },
-      // {
-      //   name: "Cuba Libre",
-      //   ingredients: ["rhum blanc", "coca", "citron vert"],
-      // },
-      // {
-      //   name: "Piña Colada",
-      //   ingredients: ["rhum blanc", "crème de coco", "jus d'ananas"],
-      // },
-    ],
-    // "Cognac & Brandy": [
-    //   {
-    //     name: "Stinger",
-    //     ingredients: ["cognac", "crème de menthe blanche"],
-    //   },
-    // ],
-    // Apéritifs: [
-    //   {
-    //     name: "Americano",
-    //     ingredients: [
-    //       "campari",
-    //       "vermouth rouge",
-    //       "perrier",
-    //       "tranche d'orange",
-    //     ],
-    //   },
-    // ],
-  };
+  const cocktails = [
+    {
+      name: "Sex on the Beach",
+      icon: "🌅",
+      tagline: "Sucré, fruité & ensoleillé",
+      accent: "#ff6b6b",
+      ingredients: [
+        "vodka",
+        "liqueur de framboise",
+        "crème de pêche",
+        "jus d'orange",
+        "jus de cranberry",
+      ],
+    },
+    {
+      name: "Piña Colada",
+      icon: "🍍",
+      tagline: "Crémeux & exotique",
+      accent: "#f4a11c",
+      ingredients: ["rhum blanc", "crème de coco", "jus d'ananas"],
+    },
+    {
+      name: "Mojito",
+      icon: "🌿",
+      tagline: "Frais & pétillant",
+      accent: "#2ec4a0",
+      ingredients: [
+        "rhum blanc",
+        "citron vert",
+        "menthe fraîche",
+        "sucre de canne",
+        "perrier",
+      ],
+    },
+    {
+      name: "Mint Julep",
+      icon: "🥃",
+      tagline: "Boisé & élégant",
+      accent: "#118ab2",
+      ingredients: ["bourbon", "menthe fraîche", "sirop de sucre"],
+    },
+  ];
 
   return (
-    <main className="min-h-screen w-full bg-gradient-to-b from-[#f4f1e8] to-[#e8dcc0] py-12 px-4 overflow-x-hidden">
-      {/* Header épuré */}
-      <header className="flex flex-col justify-center items-center mb-16 w-full">
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Image
-            src="/logo.png"
-            width={60}
-            height={60}
-            alt="logo"
-            className="filter drop-shadow-lg sm:w-[75px] sm:h-[75px]"
-          />
-          <div className="text-center">
-            <h1
-              className={`text-4xl sm:text-5xl lg:text-6xl font-black text-[#2c1810] tracking-wider ${playfairDisplay.className}`}
-            >
-              BAR BENCHER
-            </h1>
-            <p
-              className={`text-base sm:text-lg text-[#8b7355] italic mt-2 ${crimsonText.className}`}
-            >
-              Cocktails de Gentlemen
-            </p>
-          </div>
+    <main className="relative min-h-screen w-full overflow-x-hidden bg-gradient-to-b from-[#fff4cc] via-[#ffe0a8] to-[#ffc488] py-14 px-4">
+      {/* Soleil & halos estivaux */}
+      <div className="pointer-events-none fixed inset-0">
+        <div className="absolute left-1/2 -top-24 h-[460px] w-[460px] -translate-x-1/2 rounded-full bg-[#fff2c2]/70 blur-[120px]" />
+        <div className="absolute bottom-0 left-6 h-[320px] w-[320px] rounded-full bg-[#ff8f6b]/30 blur-[120px]" />
+        <div className="absolute right-6 top-1/4 h-[320px] w-[320px] rounded-full bg-[#bfe08a]/40 blur-[120px]" />
+      </div>
+
+      {/* Filet dégradé coucher de soleil */}
+      <div className="fixed left-0 right-0 top-0 h-1.5 bg-gradient-to-r from-[#ff6b6b] via-[#f4a11c] to-[#2ec4a0]" />
+      <div className="fixed bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#2ec4a0] via-[#f4a11c] to-[#ff6b6b]" />
+
+      {/* Éléments estivaux flottants */}
+      <div className="pointer-events-none fixed inset-0 opacity-40">
+        <div className="absolute left-[7%] top-[16%] text-3xl">🌻</div>
+        <div className="absolute right-[9%] top-[20%] text-2xl">☀️</div>
+        <div className="absolute left-[12%] bottom-[22%] text-2xl">🍋</div>
+        <div className="absolute right-[11%] bottom-[18%] text-3xl">🌿</div>
+        <div className="absolute left-[46%] bottom-[10%] text-2xl">🍹</div>
+      </div>
+
+      {/* En-tête */}
+      <header className="relative z-10 mx-auto mb-16 flex max-w-3xl flex-col items-center text-center">
+        <p
+          className={`text-sm font-semibold uppercase tracking-[0.4em] text-[#e07a3f] ${quicksand.className}`}
+        >
+          Joyeux Anniversaire
+        </p>
+
+        <div className="my-5 flex items-center justify-center gap-4">
+          <span className="h-px w-14 bg-gradient-to-r from-transparent to-[#e07a3f]" />
+          <span className="text-2xl">🍹</span>
+          <span className="h-px w-14 bg-gradient-to-l from-transparent to-[#e07a3f]" />
+        </div>
+
+        <h1
+          className={`flex flex-wrap items-baseline justify-center gap-x-4 py-3 text-5xl leading-[1.5] text-transparent bg-clip-text bg-gradient-to-r from-[#ff6b6b] via-[#f4711c] to-[#ff9a56] drop-shadow-[0_2px_10px_rgba(255,255,255,0.5)] sm:text-6xl lg:text-7xl ${greatVibes.className}`}
+        >
+          <span>{PARTNER_ONE}</span>
+          <span className="text-[#2ec4a0]">&amp;</span>
+          <span>{PARTNER_TWO}</span>
+        </h1>
+
+        <p
+          className={`mt-6 max-w-md text-lg italic text-[#0d5b57] sm:text-xl ${cormorant.className}`}
+        >
+          Un été, deux amoureux et quatre cocktails à siroter. Trinquons à vous deux&nbsp;! 🥂
+        </p>
+
+        <div className="mt-6 flex items-center justify-center gap-3">
+          <span className="h-1.5 w-1.5 rotate-45 bg-[#ff6b6b]" />
+          <span className="h-1.5 w-1.5 rotate-45 bg-[#f4a11c]" />
+          <span className="h-1.5 w-1.5 rotate-45 bg-[#2ec4a0]" />
         </div>
       </header>
 
-      {/* Sections de cocktails par type d'alcool */}
-      <div className="max-w-6xl mx-auto space-y-16">
-        {Object.entries(cocktailsBySpirit).map(
-          ([spiritType, cocktails], spiritIndex) => (
-            <section key={spiritType} className="w-full">
-              {/* En-tête de section */}
-              <div className="text-center mb-12">
-                <div className="flex justify-center items-center mb-4">
-                  <div className="w-12 sm:w-20 h-px bg-gradient-to-r from-transparent via-[#8b7355] to-transparent"></div>
-                  <div className="w-2 h-2 bg-[#8b7355] rotate-45 mx-3 -mt-px"></div>
-                  <div className="w-12 sm:w-20 h-px bg-gradient-to-r from-transparent via-[#8b7355] to-transparent"></div>
-                </div>
-
-                <h2
-                  className={`text-3xl sm:text-4xl font-bold text-[#2c1810] tracking-wide mb-2 ${playfairDisplay.className}`}
-                >
-                  {spiritType}
-                </h2>
-
-                <div className="flex justify-center items-center mt-4">
-                  <div className="w-8 h-px bg-[#8b7355]"></div>
-                  <div className="w-1.5 h-1.5 bg-[#8b7355] rounded-full mx-2"></div>
-                  <div className="w-8 h-px bg-[#8b7355]"></div>
-                </div>
-              </div>
-
-              {/* Grille de cocktails pour cette section */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {cocktails.map((cocktail, cocktailIndex) => {
-                  const globalIndex =
-                    Object.values(cocktailsBySpirit)
-                      .slice(0, spiritIndex)
-                      .reduce((acc, prev) => acc + prev.length, 0) +
-                    cocktailIndex;
-
-                  return (
-                    <div
-                      key={`${spiritType}-${cocktailIndex}`}
-                      className="group relative bg-gradient-to-br from-[#f8f6f0] to-[#f0ebe0] 
-                               border-2 border-[#d4c4a8] rounded-lg shadow-lg hover:shadow-xl 
-                               transition-all duration-300 hover:scale-105 overflow-hidden"
-                    >
-                      {/* Coin décoratif */}
-                      <div
-                        className="absolute top-0 right-0 w-0 h-0 border-l-[25px] border-l-transparent 
-                                 border-t-[25px] border-t-[#8b7355] opacity-20"
-                      ></div>
-
-                      <div className="p-6">
-                        {/* Nom du cocktail */}
-                        <div className="text-center mb-4">
-                          <h3
-                            className={`text-2xl font-bold text-[#2c1810] tracking-wide 
-                                      group-hover:text-[#8b7355] transition-colors duration-300 
-                                      ${playfairDisplay.className}`}
-                          >
-                            {cocktail.name}
-                          </h3>
-
-                          {/* Ligne décorative sous le titre */}
-                          <div className="flex justify-center items-center mt-3 mb-4">
-                            <div className="w-8 h-px bg-[#8b7355]"></div>
-                            <div className="w-1.5 h-1.5 bg-[#8b7355] rounded-full mx-2"></div>
-                            <div className="w-8 h-px bg-[#8b7355]"></div>
-                          </div>
-                        </div>
-
-                        {/* Ingrédients */}
-                        <div className="space-y-2">
-                          {cocktail.ingredients.map((ingredient, idx) => (
-                            <div key={idx} className="flex items-center">
-                              <div className="w-1.5 h-1.5 bg-[#8b7355] rounded-full mr-3 flex-shrink-0"></div>
-                              <span
-                                className={`text-[#5a4a3a] text-sm leading-relaxed ${crimsonText.className}`}
-                              >
-                                {ingredient}
-                              </span>
-                            </div>
-                          ))}
-                        </div>
-
-                        {/* Numéro décoratif */}
-                        <div className="absolute bottom-3 right-3 text-[#d4c4a8] text-xs font-bold">
-                          #{(globalIndex + 1).toString().padStart(2, "0")}
-                        </div>
-                      </div>
-
-                      {/* Effet de brillance au survol */}
-                      <div
-                        className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent 
-                                 opacity-0 group-hover:opacity-10 transition-opacity duration-300 
-                                 transform -skew-x-12 translate-x-full group-hover:translate-x-[-200%] 
-                                 transition-transform duration-700"
-                      ></div>
-                    </div>
-                  );
-                })}
-              </div>
-            </section>
-          )
-        )}
-
-        {/* Citation élégante en bas */}
-        <div className="text-center mt-16 mb-8">
-          <div className="flex justify-center items-center mb-4">
-            <div className="w-16 h-px bg-gradient-to-r from-transparent via-[#8b7355] to-transparent"></div>
-            <div className="w-2 h-2 bg-[#8b7355] rotate-45 mx-4 -mt-px"></div>
-            <div className="w-16 h-px bg-gradient-to-r from-transparent via-[#8b7355] to-transparent"></div>
-          </div>
-          <blockquote
-            className={`text-lg text-[#8b7355] italic max-w-md mx-auto ${crimsonText.className}`}
+      {/* Cartes cocktails */}
+      <div className="relative z-10 mx-auto grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2">
+        {cocktails.map((cocktail, index) => (
+          <article
+            key={cocktail.name}
+            className="group relative overflow-hidden rounded-2xl border-2 bg-white/55 p-8 shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/70 hover:shadow-2xl"
+            style={{ borderColor: `${cocktail.accent}66` }}
           >
-            &ldquo;Un cocktail parfaitement préparé est l&rsquo;expression
-            ultime de l&rsquo;élégance&rdquo;
-          </blockquote>
+            {/* Bandeau de couleur */}
+            <span
+              className="absolute inset-x-0 top-0 h-1.5"
+              style={{ backgroundColor: cocktail.accent }}
+            />
+
+            {/* Numéro filigrane */}
+            <span
+              className={`pointer-events-none absolute -right-1 -top-3 select-none text-8xl font-bold ${quicksand.className}`}
+              style={{ color: `${cocktail.accent}1f` }}
+            >
+              {(index + 1).toString().padStart(2, "0")}
+            </span>
+
+            {/* Icône & nom */}
+            <div className="relative mb-5 flex items-center gap-4">
+              <span className="text-4xl transition-transform duration-300 group-hover:scale-110">
+                {cocktail.icon}
+              </span>
+              <div>
+                <h2
+                  className={`text-2xl font-bold tracking-wide text-[#0d5b57] sm:text-3xl ${quicksand.className}`}
+                >
+                  {cocktail.name}
+                </h2>
+                <p
+                  className={`mt-1 text-base italic ${cormorant.className}`}
+                  style={{ color: cocktail.accent }}
+                >
+                  {cocktail.tagline}
+                </p>
+              </div>
+            </div>
+
+            {/* Séparateur */}
+            <div className="mb-5 flex items-center gap-3">
+              <span
+                className="h-px flex-1"
+                style={{
+                  background: `linear-gradient(to right, ${cocktail.accent}80, transparent)`,
+                }}
+              />
+              <span
+                className="h-1 w-1 rotate-45"
+                style={{ backgroundColor: cocktail.accent }}
+              />
+            </div>
+
+            {/* Ingrédients */}
+            <ul className="space-y-2.5">
+              {cocktail.ingredients.map((ingredient) => (
+                <li key={ingredient} className="flex items-center gap-3">
+                  <span
+                    className="h-1.5 w-1.5 flex-shrink-0 rotate-45"
+                    style={{ backgroundColor: cocktail.accent }}
+                  />
+                  <span
+                    className={`text-lg text-[#2c4f4b] ${cormorant.className}`}
+                  >
+                    {ingredient}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+
+      {/* Citation finale */}
+      <div className="relative z-10 mx-auto mt-16 max-w-xl text-center">
+        <div className="mb-6 flex items-center justify-center gap-4">
+          <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#e07a3f]" />
+          <span className="text-2xl">🌞</span>
+          <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#e07a3f]" />
         </div>
+        <blockquote
+          className={`text-xl italic text-[#0d5b57] sm:text-2xl ${cormorant.className}`}
+        >
+          &ldquo;L&rsquo;été, l&rsquo;amour et un verre bien frais&nbsp;:
+          rien de plus à demander.&rdquo;
+        </blockquote>
+        <p
+          className={`mt-4 text-sm font-semibold uppercase tracking-[0.35em] text-[#e07a3f] ${quicksand.className}`}
+        >
+          À votre santé
+        </p>
       </div>
     </main>
   );
